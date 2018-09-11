@@ -3,12 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.marchand.xml.maven</groupId>
-    <artifactId>maven-servers-utils</artifactId>
+    <artifactId>maven-server-utils</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Maven Servers utilities</name>
+    <name>Maven Server utilities</name>
     <description>This utility allows to access to servers defined in settings.xml</description>
+
+    <url>https://github.com/cmarchand/maven-server-utils</url>
 
     <licenses>
         <license>

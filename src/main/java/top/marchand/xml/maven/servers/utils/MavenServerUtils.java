@@ -40,12 +40,12 @@ import org.codehaus.plexus.PlexusContainer;
  * 
  * Then, instanciate a MavenServerUtils, and getServer informations from its id :
  * <pre>
- *    MavenServersUtils serversUtils = new MavenServersUtils(session, container);
- *    ServerInformation serverInfos = serversUtils.getServerAuthentication("serverId");
+ *    MavenServerUtils serverUtils = new MavenServerUtils(session, container);
+ *    ServerInformation serverInfos = serverUtils.getServerAuthentication("serverId");
  * </pre>
  * @author cmarchand
  */
-public class MavenServersUtils {
+public class MavenServerUtils {
 
     private final PlexusContainer container;
     private final MavenSession session;
@@ -58,7 +58,7 @@ public class MavenServersUtils {
      * @param session MavenSession to use. May be initialized with a <tt>@Component</tt> annotation
      * @param container PlexusContainer to use. May be initialized with a <tt>@Component</tt> annotation.
      */
-    public MavenServersUtils(MavenSession session, PlexusContainer container) {
+    public MavenServerUtils(MavenSession session, PlexusContainer container) {
         super();
         this.session=session;
         this.container=container;
