@@ -25,20 +25,21 @@ package top.marchand.xml.maven.servers.utils;
 public class ServerInformation {
     private final String username;
     private final String password;
-    public ServerInformation(final String username, final String password) {
+    
+    ServerInformation(final String username, final String password) {
         super();
         this.username=username;
         this.password=password;
     }
     /**
      * The username specified in server definition
-     * @return 
+     * @return The username
      */
     public String getUsername() { return username; }
     /**
      * The password specified in server definition. If password was crypted,
      * return value is decrypted.
-     * @return 
+     * @return The decrypted password
      */
     public String getPassword() { return password; }
 }

@@ -31,10 +31,10 @@ import org.codehaus.plexus.PlexusContainer;
  * 
  * Usage : in your Mojo, declare to properties :
  * <pre>
- *  @Component
+ *  &#064;Component
  *  private MavenSession session;
  *  
- *  @Component
+ *  &#064;Component
  *  private PlexusContainer container;
  * </pre>
  * 
@@ -53,7 +53,11 @@ public class MavenServersUtils {
     private static final String SECURITY_DISPATCHER_CLASS_NAME =
         "org.sonatype.plexus.components.sec.dispatcher.SecDispatcher";
 
-    
+    /**
+     * Creates a new instance
+     * @param session MavenSession to use. May be initialized with a <tt>@Component</tt> annotation
+     * @param container PlexusContainer to use. May be initialized with a <tt>@Component</tt> annotation.
+     */
     public MavenServersUtils(MavenSession session, PlexusContainer container) {
         super();
         this.session=session;
@@ -71,9 +75,9 @@ public class MavenServersUtils {
      *   &lt;/servers&gt;
      * &lt;/settings&gt;
      * </pre>
-     * @param serverId
-     * @return
-     * @throws MojoExecutionException 
+     * @param serverId The server identifier, as defined in settings.xml
+     * @return The server informations
+     * @throws MojoExecutionException If server does not exists in settings.xml
      */
     public ServerInformation getServerAuthentication(
             final String serverId) throws MojoExecutionException {
